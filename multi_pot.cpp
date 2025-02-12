@@ -18,6 +18,7 @@ MultiPot::MultiPot( int8_t pin, int8_t led, int8_t values ) {
 	
 	_pot_pin = pin;
 	_led_pin = led;
+	_value_count = values;
 
 	for(i=0; i<values;i++) {
 		_values[i] =  0;
@@ -41,6 +42,8 @@ void MultiPot::read( int8_t pot ) {
 	
 	if ( _current_pot != pot ) return;
 	
+	if( pot >= _value_count ) return;
+
 	int16_t val = analogRead( _pot_pin );
 	
 	if (((val - _values[pot]) > HYSTERESIS) || ((_values[pot] - val) > HYSTERESIS)) {
@@ -92,6 +95,8 @@ void MultiPot::setCurrentPot( int8_t pot ) {
 		digitalWrite( _led_pin, LOW);
 	}
 	
+	if( pot >= _value_count ) return;
+
 	int16_t val = analogRead( _pot_pin );
 	
 	Serial.print("\t val: ");Serial.println(val);

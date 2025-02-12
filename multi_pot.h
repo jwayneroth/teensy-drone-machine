@@ -39,7 +39,8 @@ class MultiPot {
 		int8_t
 			_pot_pin, 
 			_led_pin, 
-			_current_pot;
+			_current_pot,
+			_value_count;
 			
 		int16_t 
 			_values[MAX_VALUES];

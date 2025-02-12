@@ -25,10 +25,10 @@ volatile char t2Over;
 */
 void setupTimer() {
 	
-	lfo_one_freq = OSCIL_MIN;
-	lfo_two_freq = OSCIL_MIN;
-	lfo_three_freq = OSCIL_MIN;
-	lfo_four_freq = OSCIL_MIN;
+	lfo_one_freq = random( OSCIL_MIN, OSCIL_MAX );
+	lfo_two_freq = random( OSCIL_MIN, OSCIL_MAX );
+	lfo_three_freq = random( OSCIL_MIN, OSCIL_MAX );
+	lfo_four_freq = random( OSCIL_MIN, OSCIL_MAX );
 	
 	oscilTimer.begin(oscilFire, 100);
 }

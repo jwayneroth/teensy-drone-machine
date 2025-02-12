@@ -18,7 +18,7 @@ volatile int lfo_four_val;
 volatile int * lfo_vals[] = { &lfo_one_val, &lfo_two_val, &lfo_three_val, &lfo_four_val };
 volatile int * lfo_vals_init[] = { &lfo_one_val, &lfo_two_val, &lfo_three_val, &lfo_four_val };
 
-int8_t menu_mode = 0;
+int8_t menu_mode = 4;
 int8_t sub_menu_mode = 0;
 
 byte save_flag = 0;

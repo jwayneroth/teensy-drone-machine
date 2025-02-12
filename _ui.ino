@@ -15,10 +15,10 @@
 
 #define MENU_MODE_TOTAL 5
 
-MultiPot pot_one( POT_ONE, LED_ONE, 6 );
-MultiPot pot_two( POT_TWO, LED_TWO, 6 );
-MultiPot pot_three( POT_THREE, LED_THREE, 6 );
-MultiPot pot_four( POT_FOUR, LED_FOUR, 6 );
+MultiPot pot_one( POT_ONE, LED_ONE, 5 );
+MultiPot pot_two( POT_TWO, LED_TWO, 4 );
+MultiPot pot_three( POT_THREE, LED_THREE, 4 );
+MultiPot pot_four( POT_FOUR, LED_FOUR, 4 );
 
 MultiPot * multi_pots[] = { &pot_one, &pot_two, &pot_three, &pot_four };
 
